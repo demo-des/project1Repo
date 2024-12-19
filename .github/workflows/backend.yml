@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 defaults:
   run:  
-    working-directory: ./demo-solution/demo-solution.Server
+    working-directory: demo-solution/demo-solution.Server
 jobs:
   build:
 
@@ -21,8 +21,8 @@ jobs:
       run: |
           ls ${{ github.workspace }}
     - uses: actions/checkout@v4
-      with:
-        path: demo-solution/demo-solution.Server
+ #     with:
+ #       path: demo-solution/demo-solution.Server
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
