@@ -15,9 +15,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: List files in the repository
+      run: |
+          ls ${{ github.workspace }}
     - uses: actions/checkout@v4
       with:
-        path: demo-solution.Server
+        path: demo-solution/demo-solution.Server
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
