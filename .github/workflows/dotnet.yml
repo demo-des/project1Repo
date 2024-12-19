@@ -16,12 +16,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+      with:
+        path:demo-solution.Server
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore     
     - name: Build
       run: dotnet build --no-restore
     - name: Test
