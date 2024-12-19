@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
-        path:demo-solution.Server
+        path: demo-solution.Server
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
